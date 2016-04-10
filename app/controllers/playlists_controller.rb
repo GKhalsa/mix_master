@@ -8,11 +8,12 @@ class PlaylistsController < ApplicationController
   end
 
   def create
+    byebug
     if @playlist = Playlist.create(playlist_params)
       redirect_to @playlist
     else
       render :new
-    end  
+    end
   end
 
   def show
